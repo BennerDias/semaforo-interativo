@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5vh;
+}
+.button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+}
+
+.button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+#red {
+    background-color: red;
+    box-shadow: 0 6px 15px rgba(255, 0, 0, 0.8);
+}
+
+#yellow {
+    background-color: yellow;
+    color: black; /* Para maior contraste */
+    box-shadow: 0 6px 15px rgba(255, 255, 0, 0.8);
+    color: white;
+}
+
+#green {
+    background-color: green;
+    box-shadow: 0 6px 15px rgba(0, 255, 0, 0.8);
+}
+
+#automatic {
+    background: linear-gradient(90deg, red, yellow, green);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.8);
+    color: white;
+}
+.button:active {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6); 
+    animation: blink 0.1s ease-in-out;
+}
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0; 
+    }
+}
